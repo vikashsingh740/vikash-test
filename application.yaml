@@ -6,9 +6,11 @@ metadata:
 spec:
   project: default  # Argo CD project name
   source:
-    repoURL: https://github.com/vikashsingh740/vikash-test.git
+    repoURL: git@github.com:vikashsingh740/vikash-test.git
     path: dev
     targetRevision: HEAD  # Git branch, tag, or commit SHA to deploy
+    sshPrivateKeySecret:
+      name: argocd-ssh-secret
   destination:
     server: https://kubernetes.default.svc  # Kubernetes API server URL
     namespace: myapp  # Namespace where resources will be deployed
