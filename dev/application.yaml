@@ -6,8 +6,8 @@ metadata:
 spec:
   project: default  # Argo CD project name
   source:
-    repoURL: <your-git-repo-url>  # URL of your Git repository
-    path: path/to/kubernetes-manifests  # Path to directory containing Kubernetes manifests
+    repoURL: https://github.com/vikashsingh740/vikash-test.git
+    path: dev
     targetRevision: HEAD  # Git branch, tag, or commit SHA to deploy
   destination:
     server: https://kubernetes.default.svc  # Kubernetes API server URL
